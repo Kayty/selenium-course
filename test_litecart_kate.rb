@@ -10,11 +10,11 @@ describe 'Login litecart:' do
 	 it "should login successfully" do
 	 	@driver.navigate.to 'http://localhost/litecart/admin/login.php'
 
-	 	element = @driver.find_element(:name, 'username')
-	 	element.send_keys 'admin'
-	 	element = @driver.find_element(:name, 'password')
-	 	element.send_keys 'admin'
-	 	element = @driver.find_element(:name, 'remember_me').click()
-	 	element = @driver.find_element(:name,'login').click()
+	 	username = @driver.find_element(:name, 'username')
+	 	username.send_keys 'admin'
+	 	password = @driver.find_element(:name, 'password')
+	 	password.send_keys 'admin'
+	 	@driver.find_element(:name, 'remember_me').click()
+	 	@driver.find_element(:name,'login').click()
 	 end 
 	end
